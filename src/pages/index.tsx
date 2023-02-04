@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center">
         <h1 className="text-5xl font-extrabold tracking-tight text-cyan-400 sm:text-[5rem]">
-          My McGill Student
+          McThrive
         </h1>
         <CourseList />
       </main>
