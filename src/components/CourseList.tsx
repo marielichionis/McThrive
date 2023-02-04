@@ -48,7 +48,7 @@ export default function CourseList() {
     <div>
       <ul className="flex flex-col gap-4">
         {courses.map((course) => (
-          <li key={course.id} className="flex gap-2">
+          <li key={course.id} className="flex justify-between gap-4">
             <h4 className="font-bold">{course.name}</h4>
             <CourseAssignments
               course={course}
