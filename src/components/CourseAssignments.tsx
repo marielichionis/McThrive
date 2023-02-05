@@ -32,7 +32,7 @@ export default function CourseAssignments({
       <div className="box-border flex gap-4 border-2">
         <input
           type="text"
-          placeholder="Add an assignment to this class"
+          placeholder="Add an assignment"
           value={newAssignment}
           onChange={(e) => setNewAssignment(e.target.value)}
         />
