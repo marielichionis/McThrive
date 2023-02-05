@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { boolean } from "zod";
 import type { Assignment, Course } from "../types/schemas";
 
 // Assignments
@@ -29,14 +30,18 @@ export default function CourseAssignments({
       <ul>
         {course.assignments.map((assignment) => (
           <li key={assignment.id}>
-            <input type="checkbox" />
-
+            <input
+              type="checkbox"
+              onChange={(e) => {
+                e.target.value;
+              }}
+            />
             {assignment.name}
           </li>
         ))}
       </ul>
 
-      <div className="box-border flex gap-4 border-2">
+      <div className="border-10 box-border flex gap-4">
         <input
           type="text"
           placeholder="Add an assignment" // what displays on the textbox
