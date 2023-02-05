@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center">
-        <h1 className="text-5xl font-extrabold tracking-tight text-yellow-400 sm:text-[5rem]">
+        <h1 className="text-5xl font-extrabold tracking-tight text-cyan-500 sm:text-[5rem]">
           McThrive
         </h1>
         <CourseList />
