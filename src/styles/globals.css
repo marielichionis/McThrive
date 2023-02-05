@@ -4,19 +4,19 @@
 
 @layer base {
   body {
-    @apply bg-red-700;
+    @apply bg-amber-300;
   }
 
   main {
-    background: palegreen;
+    background: bg-amber-300;
   }
 }
 
 @layer components {
   h1 {
-    @apply cursor-pointer text-sm font-bold text-zinc-900;
+    @apply cursor-pointer text-sm font-bold text-rose-400;
   }
   li {
-    background: space gray;
+    background: space pink;
   }
 }
