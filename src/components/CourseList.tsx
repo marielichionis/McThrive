@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { Assignment, Course } from "../types/schemas";
 import CourseAssignments from "./CourseAssignments";
 
+// Course ex: COMP202
 export default function CourseList() {
   const [newCourseDrop, setNewCourseDrop] = useState("");
   const [courses, setCourses] = useState<Course[]>([]);
@@ -46,10 +47,17 @@ export default function CourseList() {
 
   return (
     <div>
-      <ul className="flex flex-col gap-4">
+      <ul className="z-20 flex flex-col gap-4">
         {courses.map((course) => (
-          <li key={course.id} className="flex justify-between gap-4">
-            <h4 className="font-bold">{course.name}</h4>
+          <li
+            key={course.id}
+            className="flex justify-between gap-4" // space between class name and add assignment bar
+          >
+            <h4
+              className="font-bold" //display of course
+            >
+              {course.name}
+            </h4>
             <CourseAssignments
               course={course}
               onAddAssignment={addAssignmentToCourse}
@@ -59,7 +67,7 @@ export default function CourseList() {
       </ul>
 
       <div className="m-8">
-        <input
+        <input // user input
           type="text"
           placeholder="Add a new class"
           value={newCourseDrop}

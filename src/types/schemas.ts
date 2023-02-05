@@ -1,6 +1,7 @@
 export interface Assignment {
   id: number;
   name: string;
+  status: boolean;
 }
 
 export interface Course {

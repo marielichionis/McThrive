@@ -1,6 +1,8 @@
 import { useState } from "react";
 import type { Assignment, Course } from "../types/schemas";
 
+// Assignments
+
 export default function CourseAssignments({
   course,
   onAddAssignment,
@@ -15,6 +17,7 @@ export default function CourseAssignments({
     const item: Assignment = {
       id: Math.floor(Math.random() * 1000),
       name: newAssignment,
+      status: false,
     };
 
     setNewAssignment("");
@@ -25,14 +28,18 @@ export default function CourseAssignments({
     <div>
       <ul>
         {course.assignments.map((assignment) => (
-          <li key={assignment.id}>{assignment.name}</li>
+          <li key={assignment.id}>
+            <input type="checkbox" />
+
+            {assignment.name}
+          </li>
         ))}
       </ul>
 
       <div className="box-border flex gap-4 border-2">
         <input
           type="text"
-          placeholder="Add an assignment to this class"
+          placeholder="Add an assignment to this class" // what displays on the textbox
           value={newAssignment}
           onChange={(e) => setNewAssignment(e.target.value)}
         />

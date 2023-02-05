@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-red-700;
+  }
+
+  main {
+    background: palegreen;
+  }
+}
+
+@layer components {
+  h1 {
+    @apply cursor-pointer text-sm font-bold text-zinc-900;
+  }
+  li {
+    background: space gray;
+  }
+}
