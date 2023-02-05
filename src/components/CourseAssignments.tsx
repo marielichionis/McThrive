@@ -31,6 +31,7 @@ export default function CourseAssignments({
         {course.assignments.map((assignment) => (
           <li key={assignment.id}>
             <input
+              className="py-3"
               type="checkbox"
               onChange={(e) => {
                 e.target.value;
@@ -41,15 +42,21 @@ export default function CourseAssignments({
         ))}
       </ul>
 
-      <div className="border-10 box-border flex gap-4">
+      <div className="flex gap-4">
         <input
+          className="bg-transparent font-semibold"
           type="text"
           placeholder="Add an assignment" // what displays on the textbox
           value={newAssignment}
           onChange={(e) => setNewAssignment(e.target.value)}
         />
 
-        <button onClick={() => addAssignment()}>Add</button>
+        <button
+          className="rounded bg-violet-500 py-2 px-4 font-bold text-white hover:bg-violet-700"
+          onClick={() => addAssignment()}
+        >
+          Add
+        </button>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-amber-300;
+    @apply border-x-indigo-300;
   }
 
   main {
@@ -14,9 +14,16 @@
 
 @layer components {
   h1 {
-    @apply cursor-pointer text-sm font-bold text-rose-400;
+    @apply cursor-pointer rounded-lg text-sm font-bold text-rose-400;
   }
   li {
     background: space pink;
+  }
+  h4 {
+    @apply m-3;
+  }
+  .border {
+    @apply rounded;
+    @apply border-transparent;
   }
 }

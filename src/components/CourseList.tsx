@@ -47,11 +47,11 @@ export default function CourseList() {
 
   return (
     <div>
-      <ul className="z-20 flex flex-col gap-4">
+      <ul className="z-20 flex gap-4 py-4">
         {courses.map((course) => (
           <li
             key={course.id}
-            className="flex justify-between gap-4" // space between class name and add assignment bar
+            className="flex justify-between gap-4 border" // space between class name and add assignment bar
           >
             <h4
               className="font-bold" //display of course
@@ -66,15 +66,21 @@ export default function CourseList() {
         ))}
       </ul>
 
-      <div className="m-8">
+      <div className="flex rounded bg-cyan-100 shadow">
         <input // user input
+          className="flex grow bg-transparent text-center font-semibold"
           type="text"
           placeholder="Add a new class"
           value={newCourseDrop}
           onChange={(e) => setNewCourseDrop(e.target.value)}
         />
 
-        <button onClick={() => addCourseDrop()}>Add</button>
+        <button
+          className="rounded bg-violet-500 py-2 px-4 font-bold text-white hover:bg-violet-700"
+          onClick={() => addCourseDrop()}
+        >
+          Add
+        </button>
       </div>
     </div>
   );
